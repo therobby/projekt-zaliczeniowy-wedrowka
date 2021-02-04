@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	{{> partials/head}}
+	<body>
+		<div class="d-flex flex-column">
+			{{> partials/nav}}
+			<div class="jumbotron">
+				<h1 class="display-4">{{title}}</h1>
+				<p class="lead">{{desc}}</p>
+				<hr class="my-4" />
+				<p>Dystans: {{distance}} metrów</p>
+				<p>Miejsce rozpoczęcia: {{from}}</p>
+				<p>Cel: {{to}}</p>
+				<p>Od {{date_from}} do {{date_to}}</p>
+				<div class="d-flex flex-column">
+					{{#photos}}
+					<a href="{{photo}}" target="_blank" style="width: 640px; height: 480px">
+						<img alt="zdjęcie" src="{{photo}}" width="640" height="480" />
+					</a>
+					{{/photos}} {{#video}}
+					<video width="640" height="480" controls>
+						<source src="{{video}}" type="{{type}}" />
+					</video>
+					{{/video}}
+				</div>
+				<p class="lead">
+					<a class="btn btn-outline-primary" href="/journey/{{_id}}/edit" role="button">Edytuj</a>
+					<a class="btn btn-outline-danger" href="/journey/{{_id}}/delete" role="button">Usuń</a>
+				</p>
+			</div>
+		</div>
+		{{> partials/footer}}
+	</body>
+</html>
