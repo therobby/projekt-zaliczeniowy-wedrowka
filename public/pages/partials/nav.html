@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-light">
+	<a class="navbar-brand" href="/"><img class="logo" src="/public/logo.png" alt="Wycieczkowo" /></a>
+	<!-- <span class="navbar-text"> logged_name </span> -->
+	{{^username}}
+	<a class="btn btn-outline-success my-2 mr-sm-2" href="/login" type="submit">Zaloguj</a>
+	{{/username}} {{#username}}
+	<span class="navbar-text">Zalogowano jako {{username}} </span>
+	<form class="form-inline">
+		{{#journey_page}}
+		<a class="btn btn-outline-success my-2 mr-sm-2" href="/journey/new" type="submit">Dodaj</a>
+		<a class="btn btn-outline-success my-2 mr-sm-2" href="/logout" type="submit">Wyloguj się</a>
+		{{/journey_page}} {{^journey_page}}
+		<a class="btn btn-outline-success my-2 mr-sm-2" href="/journey" type="submit">Wycieczki</a>
+		<a class="btn btn-outline-success my-2 mr-sm-2" href="/logout" type="submit">Wyloguj się</a>
+	</form>
+	{{/journey_page}} {{/username}}
+</nav>
