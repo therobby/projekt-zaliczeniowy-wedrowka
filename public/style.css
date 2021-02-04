@@ -1,0 +1,38 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+/* .container-fluid * {
+	max-height: 100vh;
+}
+img {
+	max-height: 100%;
+}
+.carousel-item {
+	overflow: hidden;
+}
+
+.carousel-item {
+	height: 100% !important;
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel-item img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+} */
+
+img.logo {
+	max-width: 50px;
+	max-height: 50px;
+}
+
+div .card {
+	max-width: 600px;
+}
